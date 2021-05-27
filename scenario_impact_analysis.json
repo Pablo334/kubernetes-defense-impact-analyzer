@@ -4,7 +4,7 @@
             "id": "1",
             "name": "Scenario 1 - Access to cluster through RCE in Web Application",
             "tactics": {
-                "Initial Access": {
+                "InitialAccess": {
                     "techniques": [
                         {
                             "id": "T1190" ,
@@ -99,7 +99,7 @@
                         }
                     ]
                 },
-                "Lateral Movement": {
+                "LateralMovement": {
                     "techniques": [
                         {
                             "id": "T1021",
@@ -147,7 +147,7 @@
                         }
                     ]
                 },
-                "Privilege Escalation": {
+                "PrivilegeEscalation": {
                     "techniques": [
                         {
                             "id": "T1611",
@@ -266,7 +266,7 @@
                         }
                     ]
                 },
-                "Defense Evasion":{
+                "DefenseEvasion":{
                     "techniques": [
                         {
                             "id": "T1562",
@@ -326,7 +326,7 @@
             "id": "2",
             "name": "Scenario 2 - Access to cluster through supply chain attack",
             "tactics": {
-                "Initial Access": {
+                "InitialAccess": {
                     "techniques": [
                         {
                             "id": "T1195" ,
@@ -428,7 +428,7 @@
                         }
                     ]
                 },
-                "Lateral Movement": {
+                "LateralMovement": {
                     "techniques": [
                         {
                             "id": "T1021",
@@ -476,7 +476,7 @@
                         }
                     ]
                 },
-                "Privilege Escalation": {
+                "PrivilegeEscalation": {
                     "techniques": [
                         {
                             "id": "T1134",
@@ -540,7 +540,7 @@
                         }
                     ]
                 },
-                "Initial Access": {
+                "InitialAccess": {
                     "techniques": [
                         {
                             "id": "T1190" ,
@@ -646,7 +646,7 @@
                         }
                     ]
                 },
-                "Lateral Movement": {
+                "LateralMovement": {
                     "techniques": [
                         {
                             "id": "T1021",
@@ -669,7 +669,7 @@
                         }
                     ]
                 },
-                "Privilege Escalation": {
+                "PrivilegeEscalation": {
                     "techniques": [
                         {
                             "id": "T1611",
