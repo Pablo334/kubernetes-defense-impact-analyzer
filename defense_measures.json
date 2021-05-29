@@ -13,10 +13,22 @@
                             "name": "Secure file permissions",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -24,10 +36,22 @@
                             "name": "Run API Server on Secure Connection",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -35,10 +59,22 @@
                             "name": "Enable authorization in API Server",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -46,10 +82,22 @@
                             "name": "Enable security flags in API Server",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -57,10 +105,22 @@
                             "name": "Enable security flags in Controller Manager",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -68,10 +128,22 @@
                             "name": "Enable security flags in Kube Scheduler",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -79,10 +151,22 @@
                             "name": "Secure API Server - etcd communication",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -90,10 +174,22 @@
                             "name": "Enable security flags for etcd",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -101,10 +197,22 @@
                             "name": "Run etcd in firewalled separate host",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         }
                     ]
@@ -118,10 +226,22 @@
                             "name": "Secure file permissions",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -129,10 +249,22 @@
                             "name": "Enable Kubelet Authentication",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -140,10 +272,22 @@
                             "name": "Enable Kubelet Authorization",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -151,10 +295,22 @@
                             "name": "Enable security flags for Kubelet",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -162,10 +318,22 @@
                             "name": "Set strong cipher suites for Kubelet",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         }
                     ]
@@ -191,10 +359,22 @@
                     "name": "Admission Controllers (ImagePolicyWebhook/ValidatingWebhooks/MutatinWebhooks)",
                     "type": "Prevention",
                     "k8s-version-status":{
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -222,10 +402,22 @@
                     "id": "3.1",
                     "name": "Use namespaces to group logically connected services",
                     "k8s-version-status":{
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -237,10 +429,22 @@
                             "name": "Set Egress rules",
                             "type": "Prevention",
                             "k8s-version-status":{
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                }
                             }
                         },
                         {
@@ -248,10 +452,22 @@
                             "name": "Set Ingress rules",
                             "type": "Prevention",
                             "k8s-version-status":{
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                }
                             }
                         }
                     ]
@@ -260,10 +476,22 @@
                     "id": "3.3",
                     "name": "Monitor Cluster Network Traffic",
                     "k8s-version-status":{
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 }
             ]
@@ -281,10 +509,22 @@
                             "name": "Prevent sharing of host PID/IPC - Container/Node segregation",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -292,10 +532,22 @@
                             "name": "Limiting mounted Volume Types",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -303,10 +555,22 @@
                             "name": "Prevent sharing of host network namespace",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -314,10 +578,22 @@
                             "name": "Minimize admission of containers with allowPrivilegeEscalation enabled",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -325,10 +601,22 @@
                             "name": "Minimize admission of containers running as root",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         }
                     ]
@@ -348,10 +636,22 @@
                             "name": "Set Egress rules",
                             "type": "Prevention",
                             "k8s-version-status":{
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                }
                             }
                         },
                         {
@@ -359,10 +659,22 @@
                             "name": "Set Ingress rules",
                             "type": "Prevention",
                             "k8s-version-status":{
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "OK"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                }
                             }
                         }
                     ]
@@ -382,10 +694,22 @@
                             "name": "Enforce AppArmor and Seccomp profiles",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -393,10 +717,22 @@
                             "name": "Enforce the use of read-only root filesystem",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -404,21 +740,45 @@
                             "name": "Enforce containers to run with non-zero (root) uid",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://gist.github.com/Pablo334/d9c888207d48b7a54999b010d54fa561"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
-                            "id": "6.1.3",
+                            "id": "6.1.4",
                             "name": "Minimize admission of containers with allowPrivilegeEscalation enabled",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         },
                         {
@@ -426,10 +786,22 @@
                             "name": "Minimize capabilities - Principle of Least Privilege",
                             "type": "Prevention",
                             "k8s-version-status": {
-                                "1.18": "OK",
-                                "1.19": "OK",
-                                "1.20": "OK",
-                                "1.21": "DEPRECATED"
+                                "1.18": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.19": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.20": {
+                                    "status": "OK",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                },
+                                "1.21": {
+                                    "status": "DEPRECATED",
+                                    "info": "https://blog.aquasec.com/kubernetess-policy"
+                                }
                             }
                         }
                     ]
@@ -439,10 +811,22 @@
                     "name": "Set pod Security Context during deployment",
                     "type": "Prevention",
                     "k8s-version-status":{
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -450,10 +834,22 @@
                     "name": "Ensure that Seccomp profile is set to runtime/default in deployment files",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -461,10 +857,22 @@
                     "name": "Runtime tools: Alerts from Event/Audit Logs",
                     "type": "Detection",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18":{
+                            "status": "OK",
+                            "info": ""
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": ""
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": ""
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": ""
+                        }
                     }
                 },
                 {
@@ -472,10 +880,22 @@
                     "name": "Set limits on pod resources",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 }
             ]
@@ -489,10 +909,22 @@
                     "name": "Protect container-secret mounting: - Mount secrets as file not as env variables",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -500,10 +932,22 @@
                     "name": "Encrypt secrets at rest in etcd database",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -511,10 +955,22 @@
                     "name": "Minimize access to secrets",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 }
             ]
@@ -528,10 +984,22 @@
                     "name": "Minimize wildcard use in Roles and ClusterRoles",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -539,10 +1007,22 @@
                     "name": "Minimize access to create/delete/exec pods/deployments/daemonsets/replicasets/nodes/secrets",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -550,10 +1030,22 @@
                     "name": "Service Account Tokens are mounted only when necessary",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 },
                 {
@@ -561,10 +1053,22 @@
                     "name": "Avoid using default Service Account",
                     "type": "Prevention",
                     "k8s-version-status": {
-                        "1.18": "OK",
-                        "1.19": "OK",
-                        "1.20": "OK",
-                        "1.21": "OK"
+                        "1.18": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.19": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.20": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        },
+                        "1.21": {
+                            "status": "OK",
+                            "info": "https://blog.aquasec.com/kubernetess-policy"
+                        }
                     }
                 }
             ]

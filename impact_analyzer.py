@@ -85,8 +85,11 @@ class Analyzer:
                     print("         Category: {}".format(details["category"]))
                     print("         Measure: {} {}".format(defense["id"],details["name"]))
                     print("         Type: {}".format(details["type"]))
-                    if details["k8s-version-status"][self.k8s_version] == "DEPRECATED":
+                    if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                         print("         Measure is deprecated in version {}".format(self.k8s_version))
+                        print("         For more information visit {}".format(details["k8s-version-status"][self.k8s_version]["info"]))
+                    else:
+                        print("         Examples: {}".format(defense["help"]))
                 print("     Impact of defensive measures: {}".format(technique["impact"]))
             print("")
 
@@ -121,8 +124,11 @@ class Analyzer:
                         f.write("         Category: {}\n".format(details["category"]))
                         f.write("         Measure: {} {}\n".format(defense["id"],details["name"]))
                         f.write("         Type: {}\n".format(details["type"]))
-                        if details["k8s-version-status"][self.k8s_version] == "DEPRECATED":
+                        if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                             f.write("         Measure is deprecated in version {}\n".format(self.k8s_version))
+                            f.write("         For more information visit {}\n".format(details["k8s-version-status"][self.k8s_version]["info"]))
+                        else:
+                            f.write("         Examples: {}".format(defense["help"]))
                     f.write("     Impact of defensive measures: {}\n".format(technique["impact"]))
                 f.write("\n")
     
@@ -143,7 +149,7 @@ class Analyzer:
         soup.head.title.string = "Output {}".format(generation_time)
         container_div = soup.new_tag("div", id="container")
         report_title_h1 = soup.new_tag("h1")
-        report_title_h1.string = "Kubernetes defense report generated on {}".format(generation_time)
+        report_title_h1.string = "Kubernetes defense report generated on {} - Version {}".format(generation_time, self.k8s_version)
         container_div.append(report_title_h1)
         for key in self.result["tactics"]:
 
@@ -209,37 +215,45 @@ class Analyzer:
                     details = self.get_defense_details(defense["id"])
                     row = soup.new_tag("tr")
 
-                    #Id field
+                    # Id field
                     data_id = soup.new_tag("td")
                     data_id.string = "{}".format(defense["id"])
                     row.append(data_id)
 
-                    #Name field
+                    # Name field
                     measure = soup.new_tag("td")
                     measure.string = "{}".format(details["name"])
                     row.append(measure)
 
-                    #Category field
+                    # Category field
                     category = soup.new_tag("td")
                     category.string = "{}".format(details["category"])
                     row.append(category)
 
-                    #Type field
+                    # Type field
                     defense_type = soup.new_tag("td")
                     defense_type.string = "{}".format(details["type"])
                     row.append(defense_type)
 
-                    #Compatibility field: shows status in selected k8s version
+                    # Compatibility field: shows status in selected k8s version
                     compatibility = soup.new_tag("td")
-                    info = soup.new_tag("td")
-                    if details["k8s-version-status"][self.k8s_version] == "DEPRECATED":
+                    info_td = soup.new_tag("td")
+                    
+                    if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                         compatibility.string = "Deprecated in version {}".format(self.k8s_version)
-                        info.string = "Lookup OPA Gatekeeper"
+                        info_a = soup.new_tag("a", href=details["k8s-version-status"][self.k8s_version]["info"])
+                        info_a.string=details["k8s-version-status"][self.k8s_version]["info"]
                     else:
                         compatibility.string = "OK"
+                        info_a = soup.new_tag("a", href=defense["help"])
+                        info_a.string=defense["help"]
+                    
+                    
+                    
+                    info_td.append(info_a)
                     
                     row.append(compatibility)
-                    row.append(info)
+                    row.append(info_td)
                     
                     table.append(row)
 
