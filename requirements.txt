@@ -1,1 +1,2 @@
 beautifulsoup3
+termcolor

@@ -387,7 +387,8 @@
                             "name": "Supply Chain Compromise",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "PARTIAL IMPACT"
@@ -401,7 +402,8 @@
                             "name": "Command and Scripting Interpreter",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "PARTIAL IMPACT"
@@ -411,7 +413,8 @@
                             "name": "Deploy Container",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "PARTIAL IMPACT"
@@ -425,7 +428,8 @@
                             "name": "Account Discovery",
                             "defenses": [
                                 {
-                                    "id": "8.3"
+                                    "id": "8.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-deployment_no_service_account_token-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -435,7 +439,8 @@
                             "name": "File and Directory Discovery",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -445,7 +450,8 @@
                             "name": "System Information Discovery",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -455,7 +461,8 @@
                             "name": "Remote System Discovery",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -465,7 +472,8 @@
                             "name": "Container Resource Discovery",
                             "defenses": [
                                 {
-                                    "id": "2.3"
+                                    "id": "2.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2-imageadmissioncontroller-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -475,7 +483,8 @@
                             "name": "Permissions Groups Discovery",
                             "defenses": [
                                 {
-                                    "id": "8.3"
+                                    "id": "8.3",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-deployment_no_service_account_token-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -489,19 +498,24 @@
                             "name": "Remote Services",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "8.1"
+                                    "id": "8.1",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.2"
+                                    "id": "8.2",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.4"
+                                    "id": "8.4",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -511,19 +525,24 @@
                             "name": "Lateral Tool Transfer",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "8.1"
+                                    "id": "8.1",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.2"
+                                    "id": "8.2",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.4"
+                                    "id": "8.4",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -537,19 +556,24 @@
                             "name": "Access Token Manipulation",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "8.1"
+                                    "id": "8.1",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.2"
+                                    "id": "8.2",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.4"
+                                    "id": "8.4",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -559,19 +583,24 @@
                             "name": "Valid Accounts",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "8.1"
+                                    "id": "8.1",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.2"
+                                    "id": "8.2",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 },
                                 {
-                                    "id": "8.4"
+                                    "id": "8.4",
+                                    "help": "https://gist.github.com/Pablo334/216dfbe9c030998330f5afbdf1d562c6#file-scenario2_rbac-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -601,10 +630,12 @@
                             "name": "Exploit Public Facing Applications",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -618,10 +649,12 @@
                             "name": "Command and Scripting Interpreter",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -631,10 +664,12 @@
                             "name": "Native API",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -644,10 +679,12 @@
                             "name": "Container Administration Command",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -661,13 +698,16 @@
                             "name": "Account Discovery",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "7.2"
+                                    "id": "7.2",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-scenario3_etcd_encryption_decryption-sh"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -677,13 +717,16 @@
                             "name": "File and Directory Discovery",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "7.2"
+                                    "id": "7.2",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-scenario3_etcd_encryption_decryption-sh"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -693,7 +736,8 @@
                             "name": "System Information Discovery",
                             "defenses": [
                                 {
-                                    "id": "6.4"
+                                    "id": "6.4",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-scenario3_custom_falco_rules-yaml"
                                 }
                             ],
                             "impact": "PARTIAL IMPACT"
@@ -707,16 +751,20 @@
                             "name": "Remote Services",
                             "defenses": [
                                 {
-                                    "id": "1.2.2"
+                                    "id": "1.2.2",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "1.2.3"
+                                    "id": "1.2.3",
+                                    "help": ""
                                 },
                                 {
-                                    "id": "7.2"
+                                    "id": "7.2",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-scenario3_etcd_encryption_decryption-sh"
                                 },
                                 {
-                                    "id": "8.4"
+                                    "id": "8.4",
+                                    "help": ""
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -730,10 +778,12 @@
                             "name": "Escape to Host",
                             "defenses": [
                                 {
-                                    "id": "4.1"
+                                    "id": "4.1",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-sceanario3_podsecuritypolicies-yaml"
                                 },
                                 {
-                                    "id": "6.1"
+                                    "id": "6.1",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-sceanario3_podsecuritypolicies-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -743,10 +793,12 @@
                             "name": "Hijack Execution Flow",
                             "defenses": [
                                 {
-                                    "id": "4.1"
+                                    "id": "4.1",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-sceanario3_podsecuritypolicies-yaml"
                                 },
                                 {
-                                    "id": "6.1"
+                                    "id": "6.1",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-sceanario3_podsecuritypolicies-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"
@@ -756,10 +808,12 @@
                             "name": "Pod hostPath Mount",
                             "defenses": [
                                 {
-                                    "id": "4.1"
+                                    "id": "4.1",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-sceanario3_podsecuritypolicies-yaml"
                                 },
                                 {
-                                    "id": "6.1"
+                                    "id": "6.1",
+                                    "help": "https://gist.github.com/Pablo334/c7c758331486a71427bf4a75782196c6#file-sceanario3_podsecuritypolicies-yaml"
                                 }
                             ],
                             "impact": "FULL IMPACT"

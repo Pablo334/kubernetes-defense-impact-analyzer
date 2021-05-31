@@ -4,6 +4,7 @@ import sys
 import os
 from datetime import datetime
 from bs4 import BeautifulSoup
+from termcolor import colored
 
 class Analyzer:
     defense_measures_path = "./defense_measures.json"
@@ -40,9 +41,9 @@ class Analyzer:
         if self.output == "json":
             self.output_json()
         elif self.output == "stdout":
-            self.output_stdout(k8s_version)
+            self.output_stdout()
         elif self.output == "txt":
-            self.output_txt(k8s_version)
+            self.output_txt()
         else:
             self.output_html()
         
@@ -64,7 +65,9 @@ class Analyzer:
         details["id"] = full_defense_data["id"]
         details["name"] = full_defense_data["name"]
         details["type"] = full_defense_data["type"]
-        details["k8s-version-status"] = full_defense_data["k8s-version-status"]
+
+        if "k8s-version-status" in full_defense_data:
+            details["k8s-version-status"] = full_defense_data["k8s-version-status"]
         
         return details
 
@@ -75,8 +78,7 @@ class Analyzer:
         print("")
 
         for key in self.result["tactics"]:
-            print("#{}".format(key))
-            print(" Attack Techniques")
+            print(colored("#{}".format(key), "cyan"))
             for technique in self.result["tactics"][key]["techniques"]:
                 print(" {}-{}".format(technique["id"], technique["name"]) )
                 print("     Enabled defense measures")
@@ -86,11 +88,21 @@ class Analyzer:
                     print("         Measure: {} {}".format(defense["id"],details["name"]))
                     print("         Type: {}".format(details["type"]))
                     if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
-                        print("         Measure is deprecated in version {}".format(self.k8s_version))
-                        print("         For more information visit {}".format(details["k8s-version-status"][self.k8s_version]["info"]))
-                    else:
-                        print("         Examples: {}".format(defense["help"]))
-                print("     Impact of defensive measures: {}".format(technique["impact"]))
+                        print("         Measure is deprecated in version {}".format(self.k8s_version))  
+                    print("         For more information visit {}".format(details["k8s-version-status"][self.k8s_version]["info"]))
+                    print("         Examples: {}".format(defense["help"]))
+
+                impact = ""
+                if technique["impact"] == "FULL IMPACT":
+                    impact = colored(technique["impact"], "red")
+                elif technique["impact"] == "PARTIAL IMPACT":
+                    impact = colored(technique["impact"], "magenta")
+                elif technique["impact"] == "LOW IMPACT":
+                    impact = colored(technique["impact"], "yellow")
+                else:
+                    impact = colored(technique["impact"], "blue")
+
+                print("     Impact of defensive measures: {}".format(impact))
             print("")
 
         print("==============================================================================================")
@@ -100,8 +112,19 @@ class Analyzer:
         if not os.path.exists(self.output_directory):
             os.makedirs(self.output_directory)
 
+        dump = self.result
+
+        for tactic in dump["tactics"]:
+            for technique in dump["tactics"][tactic]["techniques"]:
+                for defense in technique["defenses"]:
+                    details = self.get_defense_details(defense["id"])
+                    defense["name"] = details["name"]
+                    defense["category"] = details["category"]
+                    defense["type"] = details["type"]
+                    defense["k8s-version-status"] = details["k8s-version-status"]
+
         with open("{}/{}.json".format(self.output_directory,datetime.now()), "w") as f:
-            json.dump(self.result,f)
+            json.dump(dump,f,indent=4)
         print(self.result)
 
     # Write output to txt
@@ -120,15 +143,17 @@ class Analyzer:
                     f.write(" {}-{}\n".format(technique["id"], technique["name"]) )
                     f.write("     Enabled defense measures\n")
                     for defense in technique["defenses"]:
+
                         details = self.get_defense_details(defense["id"])
                         f.write("         Category: {}\n".format(details["category"]))
                         f.write("         Measure: {} {}\n".format(defense["id"],details["name"]))
                         f.write("         Type: {}\n".format(details["type"]))
+
                         if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                             f.write("         Measure is deprecated in version {}\n".format(self.k8s_version))
-                            f.write("         For more information visit {}\n".format(details["k8s-version-status"][self.k8s_version]["info"]))
-                        else:
-                            f.write("         Examples: {}".format(defense["help"]))
+                            
+                        f.write("         For more information visit {}\n".format(details["k8s-version-status"][self.k8s_version]["info"]))
+                        f.write("         Examples: {}\n".format(defense["help"]))
                     f.write("     Impact of defensive measures: {}\n".format(technique["impact"]))
                 f.write("\n")
     
@@ -184,28 +209,32 @@ class Analyzer:
                 header_row = soup.new_tag("tr")
 
                 header1 = soup.new_tag("th")
-                header1.string="Id"
+                header1.string = "Id"
                 header_row.append(header1)
 
                 header2 = soup.new_tag("th")
-                header2.string="Measure"
+                header2.string = "Measure"
                 header_row.append(header2)
 
                 header3 = soup.new_tag("th")
-                header3.string="Category"
+                header3.string = "Category"
                 header_row.append(header3)
 
                 header4 = soup.new_tag("th")
-                header4.string="Type"
+                header4.string = "Type"
                 header_row.append(header4)
 
                 header5 = soup.new_tag("th")
-                header5.string="Version Compatibility"
+                header5.string = "Version Compatibility"
                 header_row.append(header5)
 
                 header6 = soup.new_tag("th")
-                header6.string="Info"
+                header6.string = "Info"
                 header_row.append(header6)
+
+                header7 = soup.new_tag("th")
+                header7.string = "Help"
+                header_row.append(header7)
 
                 table.append(header_row)
 
@@ -237,23 +266,28 @@ class Analyzer:
 
                     # Compatibility field: shows status in selected k8s version
                     compatibility = soup.new_tag("td")
+
+                    # Info and Help fields: additional resources to help with setup
                     info_td = soup.new_tag("td")
+                    help_td = soup.new_tag("td")
+                    
+                    info_a = soup.new_tag("a", href=details["k8s-version-status"][self.k8s_version]["info"])
+                    info_a.string = details["k8s-version-status"][self.k8s_version]["info"]
+                    help_a = soup.new_tag("a", href=defense["help"])
                     
                     if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                         compatibility.string = "Deprecated in version {}".format(self.k8s_version)
-                        info_a = soup.new_tag("a", href=details["k8s-version-status"][self.k8s_version]["info"])
-                        info_a.string=details["k8s-version-status"][self.k8s_version]["info"]
+                        help_a.string = ""
                     else:
                         compatibility.string = "OK"
-                        info_a = soup.new_tag("a", href=defense["help"])
-                        info_a.string=defense["help"]
-                    
-                    
-                    
+                        help_a.string = defense["help"]
+
                     info_td.append(info_a)
+                    help_td.append(help_a)
                     
                     row.append(compatibility)
                     row.append(info_td)
+                    row.append(help_td)
                     
                     table.append(row)
 
