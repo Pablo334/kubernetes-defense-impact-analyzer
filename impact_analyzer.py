@@ -1,5 +1,5 @@
 import json
-import argparse
+from argparse import ArgumentParser,SUPPRESS,HelpFormatter
 import sys
 import os
 from datetime import datetime
@@ -11,20 +11,24 @@ class Analyzer:
     scenario_impact_analysis_path = "./scenario_impact_analysis.json"
     output_directory = "./output"
     asset_directory = "./assets"
-    html_template = "output_template.html"
+    html_template = "analyzer_output_template.html"
 
     def __init__(self, scenario, tactics, k8s_version, output):
-        with open(self.defense_measures_path, "r") as f:
-            self.defense_measures = json.load(f)
-        
-        with open(self.scenario_impact_analysis_path, "r") as f:
-            self.impact_measures = json.load(f)
-        
+        self.load_data_from_file()
+
         self.scenario = scenario
         self.tactics = tactics
         self.k8s_version = k8s_version
         self.output = output
     
+    @classmethod
+    def load_data_from_file(cls):
+        with open(cls.defense_measures_path, "r") as f:
+            cls.defense_measures = json.load(f)
+        
+        with open(cls.scenario_impact_analysis_path, "r") as f:
+            cls.impact_measures = json.load(f)
+
     # Get scenario data with selected tactics from storage
     def get_scenario_data(self):
         self.result = {
@@ -33,9 +37,12 @@ class Analyzer:
             "tactics": {}
         }
         
-        for tactic in self.tactics:
-            if tactic in self.impact_measures["Scenarios"][self.scenario]["tactics"]:
-                self.result["tactics"][tactic] = self.impact_measures["Scenarios"][self.scenario]["tactics"][tactic]
+        if "All" in self.tactics:
+            self.result["tactics"] = self.impact_measures["Scenarios"][self.scenario]["tactics"]
+        else:
+            for tactic in self.tactics:
+                if tactic in self.impact_measures["Scenarios"][self.scenario]["tactics"]:
+                    self.result["tactics"][tactic] = self.impact_measures["Scenarios"][self.scenario]["tactics"][tactic]
         
         # Output
         if self.output == "json":
@@ -93,7 +100,8 @@ class Analyzer:
                     if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                         print("         Measure is deprecated in version {}".format(self.k8s_version))  
                     print("         For more information visit {}".format(details["k8s-version-status"][self.k8s_version]["info"]))
-                    print("         Examples: {}".format(defense["help"]))
+                    if "template" in details:
+                        print("         Template: {}".format(details["template"]))
 
                 impact = ""
                 if technique["impact"] == "FULL IMPACT":
@@ -125,6 +133,7 @@ class Analyzer:
                     defense["category"] = details["category"]
                     defense["type"] = details["type"]
                     defense["k8s-version-status"] = details["k8s-version-status"]
+                    defense["template"] = details["template"]
 
         with open("{}/{}.json".format(self.output_directory,datetime.now()), "w") as f:
             json.dump(dump,f,indent=4)
@@ -156,7 +165,8 @@ class Analyzer:
                             f.write("         Measure is deprecated in version {}\n".format(self.k8s_version))
                             
                         f.write("         For more information visit {}\n".format(details["k8s-version-status"][self.k8s_version]["info"]))
-                        f.write("         Examples: {}\n".format(defense["help"]))
+                        if "template" in details:
+                            f.write("         Template: {}\n".format(details["template"]))
                     f.write("     Impact of defensive measures: {}\n".format(technique["impact"]))
                 f.write("\n")
     
@@ -315,45 +325,74 @@ class Analyzer:
         with open("{}/{}.html".format(self.output_directory, datetime.now()), "w") as f:
             f.write(soup.prettify())
 
+    @staticmethod
+    def get_only_templates(tactics):
+        templates = {}
+        
+        Analyzer.load_data_from_file()
+
+        for defense_measure in Analyzer.defense_measures["DefenseMeasures"]:
+            for sub_measure in defense_measure["sub-measures"]:
+                if "template" in sub_measure:
+                    templates[sub_measure["id"]] = sub_measure["template"]
+        
+        return templates
+
 
 # Override of ArgumentParser for custom error messages
-class CustomParser(argparse.ArgumentParser):
+class CustomParser(ArgumentParser):
     def error(self, message):
-        self.print_help()
-        sys.exit(2)
+        usage = self.usage
+        self.usage = None
+        self.print_usage(sys.stderr)
+        self.exit(2, ('%s: error: %s\n') % (self.prog, message))
+        self.usage = usage
 
 # Override of HelpFormatter for custom help message formatting
-class CustomFormatter(argparse.HelpFormatter):
+class CustomFormatter(HelpFormatter):
     def _split_lines(self, text, width):
         if text.startswith('R|'):
             return text[2:].splitlines()  
-        return argparse.HelpFormatter._split_lines(self, text, width)
+        return HelpFormatter._split_lines(self, text, width)
 
 def main():
-    tactics_list_of_choices = ["Reconnaissance", "InitialAccess", "Execution", "Discovery", "LateralMovement", "PrivilegeEscalation", "Collection", "DefenseEvasion"]
+    tactics_list_of_choices = ["All", "Reconnaissance", "InitialAccess", "Execution", "Discovery", "LateralMovement", "PrivilegeEscalation", "Collection", "DefenseEvasion"]
     output_list_of_choices = ["stdout", "json", "txt", "html"]
 
-    parser = CustomParser(description="Script for perfroming Kubernetes defense impact analysis", formatter_class=CustomFormatter)
-    parser.add_argument("-s", "--scenario", help="R|Select attack path scenario:\n" 
+    parser = CustomParser(description="Script for perfroming Kubernetes defense impact analysis", formatter_class=CustomFormatter, usage=SUPPRESS)
+    
+    subparser = parser.add_subparsers(help="sub-command help", dest="mode")
+
+    parser_analyzer = subparser.add_parser("analyzer", help="analyzer help")
+    parser_analyzer.add_argument("-s", "--scenario", help="R|Select attack path scenario:\n" 
                                                 "1: Exploitation of RCE in application\n"
                                                 "2: Supply chain attack\n"
                                                 "3: External access by misconfiguration\n", required=True, choices=["1","2","3"])
-    parser.add_argument("-t", "--tactics", type=str, help="List of Mitre ATT&CK Tactics\n", required=True, 
+    parser_analyzer.add_argument("-t", "--tactics", type=str, help="List of Mitre ATT&CK Tactics\n", required=True, 
                                             choices=tactics_list_of_choices, nargs="+")
-    parser.add_argument("-v", "--version", help="R|Kubernetes Version\n"
+    parser_analyzer.add_argument("-v", "--version", help="R|Kubernetes Version\n"
                                                 "[1.18, 1.19, 1.20, 1.21]\n", default="1.20", required=True)
-    parser.add_argument("-o", "--output", help="Output method", default="stdout", choices=output_list_of_choices)
+    parser_analyzer.add_argument("-o", "--output", help="Output method", default="stdout", choices=output_list_of_choices)
+    
+    parser_template = subparser.add_parser("template", help="template help")
+    parser_template.add_argument("-t", "--tactics", type=str, help="List of Mitre ATT&CK Tactics\n", required=True, 
+                                            choices=tactics_list_of_choices, nargs="+")
+
     args = parser.parse_args()
 
     # Arguments
     tactics = args.tactics
-    scenario = int(args.scenario) - 1
-    version = args.version
-    output = args.output
 
-    analyzer = Analyzer(scenario, tactics, version, output)
-    analyzer.get_scenario_data()
-    
+    if args.mode == "analyzer":
+        scenario = int(args.scenario) - 1
+        version = args.version
+        output = args.output
+
+        analyzer = Analyzer(scenario, tactics, version, output)
+        analyzer.get_scenario_data()
+    else:
+        templates = Analyzer.get_only_templates(tactics)
+        print(templates)    
 
 if __name__ == "__main__":
     main()
