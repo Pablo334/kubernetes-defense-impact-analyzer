@@ -375,7 +375,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-validating_webhook_for_image_admission-yaml"
                 },
                 {
                     "id": "2.4",
@@ -446,7 +447,8 @@
                                     "status": "OK",
                                     "info": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-network_policy_template-yaml"
                         },
                         {
                             "id": "3.2.2",
@@ -469,7 +471,8 @@
                                     "status": "OK",
                                     "info": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-network_policy_template-yaml"
                         }
                     ]
                 },
@@ -524,6 +527,7 @@
                             "info": "https://blog.aquasec.com/kubernetess-policy"
                         }
                     },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml",
                     "sub-measures":[
                         {
                             "id": "4.1.1",
@@ -546,7 +550,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "4.1.2",
@@ -569,7 +574,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "4.1.3",
@@ -592,7 +598,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "4.1.4",
@@ -615,7 +622,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "4.1.5",
@@ -638,7 +646,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         }
                     ]
                 }
@@ -673,7 +682,8 @@
                                     "status": "OK",
                                     "info": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-network_policy_template-yaml"
                         },
                         {
                             "id": "5.1.2",
@@ -696,7 +706,8 @@
                                     "status": "OK",
                                     "info": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-network_policy_template-yaml"
                         }
                     ]
                 }
@@ -728,6 +739,7 @@
                             "info": "https://blog.aquasec.com/kubernetess-policy"
                         }
                     },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml",
                     "sub-measures":[
                         {
                             "id": "6.1.1",
@@ -750,7 +762,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "6.1.2",
@@ -773,7 +786,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "6.1.3",
@@ -796,7 +810,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "6.1.4",
@@ -819,7 +834,8 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         },
                         {
                             "id": "6.1.5",
@@ -842,13 +858,14 @@
                                     "status": "DEPRECATED",
                                     "info": "https://blog.aquasec.com/kubernetess-policy"
                                 }
-                            }
+                            },
+                            "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-restricted_pod_security_policy_template_with_bindings-yaml"
                         }
                     ]
                 },
                 {
                     "id": "6.2",
-                    "name": "Set pod Security Context during deployment",
+                    "name": "Set Pod Security Context during deployment",
                     "type": "Prevention",
                     "k8s-version-status":{
                         "1.18": {
@@ -867,7 +884,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-deployment_with_security_context-yaml"
                 },
                 {
                     "id": "6.3",
@@ -890,7 +908,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-pod_with_seccomp_apparmor_profiles-yaml"
                 },
                 {
                     "id": "6.4",
@@ -913,7 +932,8 @@
                             "status": "OK",
                             "info": "https://github.com/falcosecurity/falco"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-falco_deployment_script_with_custom_rules_template-yaml"
                 },
                 {
                     "id": "6.5",
@@ -936,7 +956,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-pod_with_resource_limits-yaml"
                 }
             ]
         },
@@ -965,7 +986,8 @@
                             "status": "OK",
                             "info": "Download CIS Benchmarks for Kubernetes: https://www.cisecurity.org/benchmark/kubernetes/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-pod_with_mounted_secret_as_file_template-yaml"
                 },
                 {
                     "id": "7.2",
@@ -988,7 +1010,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-etcd_encypt_secrets_at_rest_template-sh"
                 },
                 {
                     "id": "7.3",
@@ -1040,7 +1063,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-rbac_serviceaccount_with_role_rolebinding_template-yaml"
                 },
                 {
                     "id": "8.2",
@@ -1063,7 +1087,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-rbac_serviceaccount_with_role_rolebinding_template-yaml"
                 },
                 {
                     "id": "8.3",
@@ -1086,7 +1111,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-deployment_with_no_sat_mounted-yaml"
                 },
                 {
                     "id": "8.4",
@@ -1109,7 +1135,8 @@
                             "status": "OK",
                             "info": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
                         }
-                    }
+                    },
+                    "template": "https://gist.github.com/Pablo334/69baf93f3eb245507c9efb312acbf838#file-deployment_with_custom_service_account-yaml"
                 }
             ]
         } 

@@ -66,6 +66,9 @@ class Analyzer:
         details["name"] = full_defense_data["name"]
         details["type"] = full_defense_data["type"]
 
+        if "template" in full_defense_data:
+            details["template"] = full_defense_data["template"]
+
         if "k8s-version-status" in full_defense_data:
             details["k8s-version-status"] = full_defense_data["k8s-version-status"]
         
@@ -233,8 +236,12 @@ class Analyzer:
                 header_row.append(header6)
 
                 header7 = soup.new_tag("th")
-                header7.string = "Help"
+                header7.string = "Template"
                 header_row.append(header7)
+
+                #header8 = soup.new_tag("th")
+                #header8.string = "Help"
+                #header_row.append(header8)
 
                 table.append(header_row)
 
@@ -269,25 +276,33 @@ class Analyzer:
 
                     # Info and Help fields: additional resources to help with setup
                     info_td = soup.new_tag("td")
-                    help_td = soup.new_tag("td")
+                    #help_td = soup.new_tag("td")
+                    template_td = soup.new_tag("td")
                     
                     info_a = soup.new_tag("a", href=details["k8s-version-status"][self.k8s_version]["info"])
                     info_a.string = details["k8s-version-status"][self.k8s_version]["info"]
-                    help_a = soup.new_tag("a", href=defense["help"])
+                    #help_a = soup.new_tag("a", href=defense["help"])
                     
                     if details["k8s-version-status"][self.k8s_version]["status"] == "DEPRECATED":
                         compatibility.string = "Deprecated in version {}".format(self.k8s_version)
-                        help_a.string = ""
+                        #help_a.string = ""
                     else:
                         compatibility.string = "OK"
-                        help_a.string = defense["help"]
+                        #help_a.string = defense["help"]
+
+                    template_a = ""
+                    if "template" in details:
+                        template_a = soup.new_tag("a", href=details["template"])
+                        template_a.string = details["template"]
 
                     info_td.append(info_a)
-                    help_td.append(help_a)
+                    #help_td.append(help_a)
+                    template_td.append(template_a)
                     
                     row.append(compatibility)
                     row.append(info_td)
-                    row.append(help_td)
+                    #row.append(help_td)
+                    row.append(template_td)
                     
                     table.append(row)
 
