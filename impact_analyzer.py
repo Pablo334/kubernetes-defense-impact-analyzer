@@ -46,13 +46,13 @@ class Analyzer:
         
         # Output
         if self.output == "json":
-            self.output_json()
+            self.analyze_output_json()
         elif self.output == "stdout":
-            self.output_stdout()
+            self.analyze_output_stdout()
         elif self.output == "txt":
-            self.output_txt()
+            self.analyze_output_txt()
         else:
-            self.output_html()
+            self.analyze_output_html()
         
     # Get details from defense ids
     def get_defense_details(self, defense_id):
@@ -82,7 +82,7 @@ class Analyzer:
         return details
 
     # Write output to stdout
-    def output_stdout(self):
+    def analyze_output_stdout(self):
         print("==============================================================================================")
         print("Defense measures for {}".format(self.result["name"]))
         print("")
@@ -119,7 +119,7 @@ class Analyzer:
         print("==============================================================================================")
     
     # Write output to json
-    def output_json(self):
+    def analyze_output_json(self):
         if not os.path.exists(self.output_directory):
             os.makedirs(self.output_directory)
 
@@ -137,10 +137,10 @@ class Analyzer:
 
         with open("{}/{}.json".format(self.output_directory,datetime.now()), "w") as f:
             json.dump(dump,f,indent=4)
-        print(self.result)
+        print(json.dumps(self.result, indent=4))
 
     # Write output to txt
-    def output_txt(self):
+    def analyze_output_txt(self):
         if not os.path.exists(self.output_directory):
             os.makedirs(self.output_directory)
 
@@ -171,7 +171,7 @@ class Analyzer:
                 f.write("\n")
     
     # Generate html output
-    def output_html(self):
+    def analyze_output_html(self):
         if not os.path.exists(self.asset_directory):
             print("[!][!] Directory {} does not exist".format(self.asset_directory))
             sys.exit(2)
@@ -381,18 +381,24 @@ def main():
     args = parser.parse_args()
 
     # Arguments
-    tactics = args.tactics
+    
 
     if args.mode == "analyzer":
         scenario = int(args.scenario) - 1
         version = args.version
         output = args.output
-
+        tactics = args.tactics
         analyzer = Analyzer(scenario, tactics, version, output)
         analyzer.get_scenario_data()
-    else:
+    elif args.mode == "template":
+        tactics = args.tactics
         templates = Analyzer.get_only_templates(tactics)
-        print(templates)    
+        print(templates)  
+    else:
+        parser.print_help()
+        sys.exit(1)  
+    
+    
 
 if __name__ == "__main__":
     main()
