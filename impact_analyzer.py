@@ -19,6 +19,7 @@ class Protector:
         self.tactics = tactics
         self.output = output
     
+    # Load data from json files
     @classmethod
     def load_data_from_file(cls):
         with open(cls.defense_measures_path, "r") as f:
@@ -369,8 +370,7 @@ class Protector:
             container_div.append(defense_div)
         return container_div
 
-
-
+    # Get template data for selected tactics from storage
     def get_only_templates(self):
         Protector.load_data_from_file()
         
@@ -416,8 +416,6 @@ class Protector:
 
         else:
             self.output_html(k8s_version="", mode="template")
-
-        
         
 # Override of ArgumentParser for custom error messages
 class CustomParser(ArgumentParser):
@@ -472,7 +470,6 @@ def main():
     else:
         parser.print_help()
         sys.exit(2) 
-        #Analyzer.generalized_output_html(args.mode)
     
     
 
