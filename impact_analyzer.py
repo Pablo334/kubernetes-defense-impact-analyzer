@@ -6,7 +6,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from termcolor import colored
 
-class Protector:
+class Worker:
     defense_measures_path = "./defense_measures.json"
     scenario_impact_analysis_path = "./scenario_impact_analysis.json"
     output_directory = "./output"
@@ -372,7 +372,7 @@ class Protector:
 
     # Get template data for selected tactics from storage
     def get_only_templates(self):
-        Protector.load_data_from_file()
+        Worker.load_data_from_file()
         
         self.templates = {}
 
@@ -436,6 +436,7 @@ class CustomFormatter(HelpFormatter):
 def main():
     tactics_list_of_choices = ["All", "Reconnaissance", "InitialAccess", "Execution", "Discovery", "LateralMovement", "PrivilegeEscalation", "Collection", "DefenseEvasion"]
     output_list_of_choices = ["stdout", "json", "txt", "html"]
+    k8s_version_list_of_choices = ["1.18", "1.19", "1.20", "1.21"]
 
     parser = CustomParser(description="Script for perfroming Kubernetes defense impact analysis", formatter_class=CustomFormatter, usage=SUPPRESS)
     
@@ -448,8 +449,7 @@ def main():
                                                 "3: External access by misconfiguration\n", required=True, choices=["1","2","3"])
     parser_analyzer.add_argument("-t", "--tactics", type=str, help="List of Mitre ATT&CK Tactics\n", required=True, 
                                             choices=tactics_list_of_choices, nargs="+")
-    parser_analyzer.add_argument("-v", "--version", help="R|Kubernetes Version\n"
-                                                "[1.18, 1.19, 1.20, 1.21]\n", default="1.20", required=True)
+    parser_analyzer.add_argument("-v", "--version", help="R|Kubernetes Version", default="1.20", required=True, choices=k8s_version_list_of_choices)
     parser_analyzer.add_argument("-o", "--output", help="Output method", default="stdout", choices=output_list_of_choices)
     
     parser_template = subparser.add_parser("template", help="template help")
@@ -462,11 +462,11 @@ def main():
     # Arguments
     if args.mode == "analyzer":
         scenario = int(args.scenario) - 1
-        analyzer = Protector(args.mode, args.tactics, args.output)
-        analyzer.get_scenario_data(scenario, args.version)
+        worker = Worker(args.mode, args.tactics, args.output)
+        worker.get_scenario_data(scenario, args.version)
     elif args.mode == "template":
-        protector = Protector(args.mode, args.tactics, args.output)
-        templates = protector.get_only_templates()
+        worker = Worker(args.mode, args.tactics, args.output)
+        templates = worker.get_only_templates()
     else:
         parser.print_help()
         sys.exit(2) 
